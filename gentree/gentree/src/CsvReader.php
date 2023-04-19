@@ -26,7 +26,7 @@ class CsvReader
         // Чтение заголовков CSV файла
         $headers = $file->fgetcsv();
         if (!$headers) {
-            throw new \RuntimeException('Не удалось прочитать заголовки CSV файла');
+            throw new \RuntimeException('Не удалось прочитать заголовки CSV ');
         }
 
         // Чтение данных CSV файла

@@ -7,7 +7,7 @@ use Gentree\Gentree;
 
 // Проверяем количество аргументов командной строки
 if ($argc !== 3) {
-    echo "Использование: php gentreetest.php <input.csv> <output.json>\n";
+    echo "Использование: php gentreetest.php <input.csv> <output.json> \n";
     exit(1);
 }
 
