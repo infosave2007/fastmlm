@@ -18,7 +18,7 @@ By diminishing the processing time required for reward accrual calculations from
 1. Clone the repository or download the ZIP archive and extract it to your desired location.
 
 ```bash
-git clone https://github.com/yinfosave2007/fastmlm.git
+git clone https://github.com/infosave2007/fastmlm.git
 ```
 
 2. Import the `database.sql` file into your MySQL server to set up the necessary tables.
