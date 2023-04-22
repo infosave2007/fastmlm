@@ -1,4 +1,4 @@
-# MLM Library for PHP and MySQL
+# MLM Client Management: Improving efficiency with a parallel tree structure approach without recursion (example PHP and MySQL)
 
 This library offers a highly efficient solution for managing MLM (Multi-Level Marketing) clients within a PHP and MySQL environment. It streamlines the process of adding, deleting, and retrieving users by leveraging a parallel tree structure, facilitating swift querying without necessitating recursive functions.
 
