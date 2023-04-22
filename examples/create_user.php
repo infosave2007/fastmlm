@@ -1,8 +1,18 @@
 <?php
 
-require_once '../public/index.php';
+require_once 'Models/User.php';
+require_once 'config/config.php';
 
-// Пример добавления пользователя
-$userId = $userController->createUser('John', 'Doe', 'john.doe@example.com', 1);
-echo "Created user with ID: {$userId}\n";
+$data = [
+    'username' => 'new_user',
+    'email' => 'new_user@example.com',
+    'password' => 'password',
+    'id_rek' => 1
+];
+
+$user = new User($pdo);
+$user->create($data);
+
+echo "User created successfully!";
+
 ?>

@@ -1,9 +1,13 @@
 <?php
 
-require_once '../public/index.php';
+require_once 'Models/User.php';
+require_once 'config/config.php';
 
-// Пример удаления пользователя
-$userId = 5; // Замените на ID пользователя, которого вы хотите удалить
-$userController->deleteUser($userId);
-echo "Deleted user with ID: {$userId}\n";
+$userId = 6;
+
+$user = new User($pdo);
+$user->delete($userId);
+
+echo "User deleted successfully!";
+
 ?>

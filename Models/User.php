@@ -106,7 +106,22 @@ class User
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([':id_rek' => $id_rek, ':user_id' => $userId]);
     }
-
+    public function getUsersByLevel($level)
+    {
+        $sql = "SELECT * FROM tree WHERE lvl = :level";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':level' => $level]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    public function getUsersByRekId($rekId)
+    {
+        $sql = "SELECT * FROM tree WHERE id_rek = :rek_id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':rek_id' => $rekId]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
     // ... другие методы, если необходимо ...
 }
 ?>
