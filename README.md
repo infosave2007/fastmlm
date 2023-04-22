@@ -1,12 +1,12 @@
 # MLM Library for PHP and MySQL
 
-This library provides an efficient solution for managing MLM (Multi-Level Marketing) clients in a PHP and MySQL environment. It simplifies the process of adding, deleting, and fetching users by utilizing a parallel tree structure that enables quick querying without the need for recursive functions.
+This library offers a highly efficient solution for managing MLM (Multi-Level Marketing) clients within a PHP and MySQL environment. It streamlines the process of adding, deleting, and retrieving users by leveraging a parallel tree structure, facilitating swift querying without necessitating recursive functions.
 
-When using recursion for an operation to calculate all users at the 23rd level of the binary tree, we will need to perform a recursive traversal of the tree, in the worst case, going through all levels. The complexity of such an algorithm is estimated as O(n * h), where n is the number of users at the level, and h is the height of the tree. In this case, it is equal to 2^23 * 24 ≈ 201,326,592 operations. 
+Utilizing recursion to compute all users at the 23rd level of a binary tree requires performing a recursive traversal of the tree. In the worst-case scenario, this involves traversing all levels. The complexity of such an algorithm is approximated as O(n * h), where n represents the number of users at the level and h denotes the height of the tree. In this case, it equates to 2^23 * 24 ≈ 201,326,592 operations.
 
-Which will take dozens of hours of work even with powerful servers and optimized code. The technique in this example allows you to speed up calculations to fractions of seconds.
+Executing this operation with recursion would take dozens of hours, even with robust servers and optimized code. However, the technique employed in this library significantly accelerates calculations, reducing the processing time to mere fractions of a second.
 
-This algorithm solved the problems with calculation and sampling in a large MLM company by reducing the processing time for accrual of rewards from 50 minutes 1 request to 0.3 seconds. Perhaps you just need this solution.
+By diminishing the processing time required for reward accrual calculations from 50 minutes per request to 0.3 seconds, this algorithm has successfully addressed the challenges associated with computations and sampling within a large MLM company. Implementing this solution could provide you with the efficiency and performance improvements you seek.
 
 ## Requirements
 
