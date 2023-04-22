@@ -1,0 +1,24 @@
+-- Create user table 
+CREATE TABLE IF NOT EXISTS `user` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `id_rek` INT(11) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Create tree table 
+CREATE TABLE IF NOT EXISTS `tree` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `id_user` INT(11) NOT NULL,
+    `id_rek` INT(11) NOT NULL,
+    `col` INT(11) NOT NULL DEFAULT 0,
+    `lvl` INT(11) NOT NULL,
+    `road` TEXT NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE,
+    FOREIGN KEY (`id_rek`) REFERENCES `user` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
