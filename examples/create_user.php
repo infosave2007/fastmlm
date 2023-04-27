@@ -1,7 +1,7 @@
 <?php
 
-require_once 'Models/User.php';
-require_once 'config/config.php';
+require_once '../app/Models/User.php';
+require_once '../config/config.php';
 
 $data = [
     'username' => 'new_user',
