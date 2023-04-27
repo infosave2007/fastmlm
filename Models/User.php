@@ -107,12 +107,15 @@ class User
         $stmt->execute([':id_rek' => $id_rek, ':user_id' => $userId]);
     }
     public function getUsersByLevel($level)
-    {
-        $sql = "SELECT * FROM tree WHERE lvl = :level";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([':level' => $level]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
+{
+    $sql = "SELECT tree.*, users.username, users.email, users.password FROM tree 
+            JOIN users ON tree.id_user = users.id
+            WHERE tree.lvl = :level";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute([':level' => $level]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
     
     public function getUsersByRekId($rekId)
     {
