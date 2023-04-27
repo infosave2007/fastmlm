@@ -29,30 +29,6 @@ git clone https://github.com/infosave2007/fastmlm.git
 
 The library provides an easy-to-use API through the `UserController` class. You can create, delete, and fetch users using the provided methods. Check the `examples` folder for sample scripts demonstrating the usage of the library.
 
-### Adding a User
-
-```php
-$userId = $userController->createUser('John', 'Doe', 'john.doe@example.com', 1);
-```
-
-### Deleting a User
-
-```php
-$userController->deleteUser($userId);
-```
-
-### Fetching Users by Level
-
-```php
-$users = $userController->getUsersByLevel($level);
-```
-
-### Fetching Users by Rek ID
-
-```php
-$users = $userController->getUsersByRekId($rekId);
-```
-
 ## Running the Examples
 
 In the command line, navigate to the `examples` folder and run the following commands:
